@@ -299,6 +299,12 @@ wrapper {
 }
 
 
+if (project.hasProperty("nodeInstall")) {
+    node {
+        version = "10.16.0"
 
+        download = true
+    }
+}
 compileJava.dependsOn processResources
 processResources.dependsOn bootBuildInfo
