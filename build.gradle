@@ -295,14 +295,15 @@ task cleanResources(type: Delete) {
 }
 
 wrapper {
-    gradleVersion = "4.10.2"
+    gradleVersion = "6.1"
 }
 
 
 if (project.hasProperty("nodeInstall")) {
     node {
         version = "10.16.0"
-
+        npmVersion = "6.9.0"
+        yarnVersion = "${yarn_version}"
         download = true
     }
 }
