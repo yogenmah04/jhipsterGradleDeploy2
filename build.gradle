@@ -299,13 +299,6 @@ wrapper {
 }
 
 
-if (project.hasProperty("nodeInstall")) {
-    node {
-        version = "${node_version}"
-        npmVersion = "${6.9.0}"
-        yarnVersion = "${yarn_version}"
-        download = true
-    }
-}
+
 compileJava.dependsOn processResources
 processResources.dependsOn bootBuildInfo
